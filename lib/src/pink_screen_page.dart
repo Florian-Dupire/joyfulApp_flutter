@@ -15,12 +15,21 @@ class PinkScreenPage extends StatelessWidget {
         ),
       ),
       body: Container(
+        width: double.infinity,
         color: Colors.pink,
-        child: Center(
-          child: ElevatedButton(
-            onPressed: () => ChannelInvoker.goTo('/blueScreen'),
-            child: const Text('Go to Flutter Blue Screen'),
-          ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            ElevatedButton(
+              onPressed: () => ChannelInvoker.goTo('/blueScreen'),
+              child: const Text('Go to Flutter Blue Screen'),
+            ),
+            const SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: () => ChannelInvoker.goTo('/greenScreen'),
+              child: const Text('Go to Native green Screen'),
+            ),
+          ],
         )
       ),
     );

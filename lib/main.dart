@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:joyfulapp_flutter/src/blue_screen_page.dart';
 import 'package:joyfulapp_flutter/src/home_page.dart';
+import 'package:joyfulapp_flutter/src/orange_square.dart';
 import 'package:joyfulapp_flutter/src/pink_screen_page.dart';
 
 void main() => runApp(const MyApp());
@@ -36,6 +37,10 @@ final GoRouter _router = GoRouter(
     GoRoute(
       path: '/pinkScreen',
       builder: (context, state) => const PinkScreenPage(),
+    ),
+    GoRoute(
+      path: '/orangeSquare',
+      builder: (context, state) => const OrangeSquare(),
     ),
   ],
 );
